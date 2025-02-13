@@ -1,6 +1,4 @@
 f = open('vasarlas.csv', 'r')
-nullaKoltes=0
-
 
 for szam in f:
     szam = szam.strip()
@@ -12,6 +10,13 @@ def napok(tmp):
         napokSzama += 1
     print("Ennyi nap volt a hónapba: ", napokSzama)
 
+def nullakoltes(tmp):
+    nullaKoltes=0
+    for nap in tmp:
+        if nap == 0:
+            nullaKoltes += 1
+    print("Ennyi napon nem történt költés: ", nullaKoltes)
 
 f.close()
 napok(tmp)
+nullakoltes(tmp)
