@@ -13,7 +13,7 @@ def napok(tmp):
 def nullakoltes(tmp):
     nullaKoltes=0
     for nap in tmp:
-        if nap == 0:
+        if nap == "0":
             nullaKoltes += 1
     print("Ennyi napon nem történt költés: ", nullaKoltes)
 
