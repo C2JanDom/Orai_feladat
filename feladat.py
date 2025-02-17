@@ -44,6 +44,12 @@ def Szum(tmp):
         szum += nap
     print("Összes költés: ", szum, "Ft")
 
+def sorozat(tmp):
+    sor=0
+    for i in range(len(tmp)):
+        if int(tmp[i]) == int(tmp[i-1]):
+            sor += 1
+    print("Leghosszabb vásárlás nélküli napok sorozata: ", sor)
 
 f.close()
 napok(tmp)
@@ -51,3 +57,4 @@ nullakoltes(tmp)
 atlagkoltes(tmp)
 minesmax(tmp)
 Szum(tmp)
+sorozat(tmp)
