@@ -32,7 +32,7 @@ def minesmax(tmp):
         if nap > maxszam:
             maxszam = nap
 
-        if nap < minszam:
+        if nap < minszam and nap != 0:
             minszam = nap
     print("Legnagyobb vásárlás: ", maxszam, "Ft")
     print("Legkisebb vásárlás: ", minszam, "Ft")
