@@ -47,7 +47,7 @@ def Szum(tmp):
 def sorozat(tmp):
     sor=0
     for i in range(len(tmp)):
-        if int(tmp[i]) == int(tmp[i-1]):
+        if int(tmp[i]) == 0 and int(tmp[i-1]) == 0:
             sor += 1
     print("Leghosszabb vásárlás nélküli napok sorozata: ", sor)
 
