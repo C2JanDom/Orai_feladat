@@ -22,9 +22,24 @@ def atlagkoltes(tmp):
     for nap in tmp:
         nap = int(nap)
         szum += nap
-    print("Napi átlagköltés: ", szum/len(tmp))
+    print("Napi átlagköltés: ", szum/len(tmp), "Ft")
+
+def minesmax(tmp):
+    maxszam=-100000
+    minszam = 100000
+    for nap in tmp:
+        nap = int(nap)
+        if nap > maxszam:
+            maxszam = nap
+
+        if nap < minszam:
+            minszam = nap
+    print("Legnagyobb vásárlás: ", maxszam, "Ft")
+    print("Legkisebb vásárlás: ", minszam, "Ft")
+        
 
 f.close()
 napok(tmp)
 nullakoltes(tmp)
 atlagkoltes(tmp)
+minesmax(tmp)
